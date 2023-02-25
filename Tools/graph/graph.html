@@ -13,12 +13,9 @@
 <body>
     <div class="container">
         <canvas id="myChart"></canvas>
-        <!-- <button onclick="myFunction()">Try it</button> -->
-        <input onkeyup="updateChart(this)" type="number" id="barvalue">
     </div>
 
     <script>
-        const moods=['angryValue'];
         const ctx = document.getElementById('myChart');
 
         new Chart(ctx, {
@@ -28,7 +25,7 @@
                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                 datasets: [{
                     label: '# of Votes',
-                    data: [88,58,69,22,5],
+                    data: [88,58,69,22,5,55],
                     borderWidth: 1
                 }]
             },
@@ -56,12 +53,6 @@
             config
         );
 
-        function updateChart(barvalues) {
-            console.log(barvalues.value);
-            myChart.config.data.datasets[0].data[0] = barvalues.value;
-            myChart.updateChart();
-            
-        }
 
     </script>
 
